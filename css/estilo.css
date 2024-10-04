@@ -1,0 +1,21 @@
+fieldset {
+    padding: 10px;
+    max-width: 750px;
+    margin: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+button {
+    margin: 5px;    
+    padding: 2px;
+}
+li {
+    padding: 5px;
+}
+
+#resultado_fibonacci, #resultado_string, #resultado_soma {
+    color: blue;
+}
