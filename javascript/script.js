@@ -1,16 +1,25 @@
 
+//========================= QUESTÃO 1 =========================
+
 function verificar() {
     // Obtém o valor digitado pelo usuário
     var numero = parseInt(document.getElementById('numero').value);
-    
-  
-    // Chama a função para verificar se o número pertence à sequência de Fibonacci
-    var pertence = pertenceFibonacci(numero);
-    
-  
-    // Exibe o resultado na página
+
+    // Captura o campo de informação do resultado
     var resultadoElement = document.getElementById('resultado_fibonacci');
-    resultadoElement.textContent = pertence ? `${numero} pertence à sequência de Fibonacci.` : `${numero} não pertence à sequência de Fibonacci.`;
+
+    // Verifica se a informação inserida pelo usuário é válida.
+    if ( isNaN(numero) || numero < 0 ) {
+        resultadoElement.textContent = 'Favor informar um número válido.'
+    } else {
+        // Chama a função para verificar se o número pertence à sequência de Fibonacci
+        var pertence = pertenceFibonacci(numero);
+
+        // Exibe o resultado na página
+        var positivo = `${numero} pertence à sequência de Fibonacci.`
+        var negativo = `${numero} não pertence à sequência de Fibonacci.`
+        resultadoElement.textContent = pertence ? positivo : negativo ;   
+    }
   }
  
   // Função para verificar se um número pertence à sequência de Fibonacci (mesma função do exemplo anterior)
@@ -45,7 +54,7 @@ function limparCampoNumero() {
     document.getElementById('resultado_fibonacci').textContent = ''   
 }
 
-//===========================================================
+//========================= QUESTÃO 2 =========================
 
 function contarLetrasA() {
     // Obtém o texto digitado pelo usuário
@@ -77,7 +86,7 @@ function limparCampoString() {
     document.getElementById('resultado_string').textContent = ''   
 }
 
-//===========================================================
+//========================= QUESTÃO 3 =========================
 
 var resultadoSoma = document.getElementById("resultado_soma");
 var soma = 0;
