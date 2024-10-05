@@ -18,6 +18,7 @@ function verificar() {
         // Exibe o resultado na página
         var positivo = `${numero} pertence à sequência de Fibonacci.`
         var negativo = `${numero} não pertence à sequência de Fibonacci.`
+        
         resultadoElement.textContent = pertence ? positivo : negativo ;   
     }
   }
@@ -57,7 +58,7 @@ function limparCampoNumero() {
 //========================= QUESTÃO 2 =========================
 
 function contarLetrasA() {
-    // Obtém o texto digitado pelo usuário
+    // Captura o texto digitado pelo usuário
     var texto = document.getElementById("texto").value;
 
     // Converte todo o texto para minúsculas para facilitar a comparação
@@ -89,12 +90,15 @@ function limparCampoString() {
 //========================= QUESTÃO 3 =========================
 
 var resultadoSoma = document.getElementById("resultado_soma");
-var soma = 0;
+
+//Função para calcular a soma 
 function calcularSoma(indice) {    
+    var soma = 0;
     for (let k = 1; k < indice; k++) {
         soma += k;
     }
-    resultadoSoma.textContent = 'O valor final de SOMA é:' + soma + "."
+    
+    resultadoSoma.textContent = 'O valor final da SOMA é: ' + soma + "."
     return soma;
 }
 
