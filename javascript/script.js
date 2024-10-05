@@ -12,7 +12,7 @@ function verificar() {
     if ( isNaN(numero) || numero < 0 ) {
         resultadoElement.textContent = 'Favor informar um número válido.'
     } else {
-        // Chama a função para verificar se o número pertence à sequência de Fibonacci
+        // Função para verificar se o número pertence à sequência de Fibonacci
         var pertence = pertenceFibonacci(numero);
 
         // Exibe o resultado na página
@@ -22,11 +22,11 @@ function verificar() {
     }
   }
  
-  // Função para verificar se um número pertence à sequência de Fibonacci (mesma função do exemplo anterior)
+  // Verifica se um número pertence à sequência de Fibonacci 
 function pertenceFibonacci(num) {
+
     // Casos base: os dois primeiros números da sequência
-    if (num === 0 || num === 1) {
-        
+    if (num === 0 || num === 1) {        
         return true;
     }
 
